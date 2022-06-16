@@ -1,80 +1,160 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {--orange : #FF972C;}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* one line style */
+.medium-text {font-weight: 500;}
+.flex {display: flex;}
+.container {width: 100%;}
+.welcome-text {font-size: 2em;}
+
+/* common style */
+.flex-items-center {
+    justify-items: center;
+    align-items: center;
+}
 body {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
+}
+.root {
+    background-color: #fff;
+}
+/* navbar */
+.navbar {
+    justify-content: space-between;
     align-items: center;
-    background-color: #FF972C;
+    padding: 10px 20px;
 }
-#contact {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-column: 1fr 5fr;
-    grid-row: auto auto;
-    grid-template-areas: 'header header' 'sidebar main';
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-    background-color: #232D33;
+.brand {
+    font-size: 2.3em;
+    cursor: pointer;
 }
-.container {
-    padding: 10px;
+.nav-list {
+    margin-right: 15px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
-.contact-header {
-    display: grid;
-    justify-content: center;
-    grid-area: header;
+.nav-list:hover {text-decoration: underline;}
+
+
+/* homePage style */
+
+.quote-text {
+    font-weight: 700;
+    font-size: 2.4em;
+    line-height: 1em;
 }
-.nama {
+.description-text {
     font-weight: 400;
-    color: #FEFFFB;
-    border-bottom: 1px gold solid;
+    font-size: 1em;
 }
-.contact-sidebar {
-    grid-area: sidebar;
-    display: flex;
+.main {
+    justify-content: center;
+    width: calc(100vw - 7rem);
+    margin: 0 auto;
+    height: 80vh;
+}
+.flat-img {
+    width: 30em;
+    margin: auto;
+}
+.text-container {
+    padding: 15px;
+    justify-content: center;
     flex-direction: column;
     gap: 10px;
 }
-.contact-sidebar > * {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    border-top: 3px gold solid;
-    background-color: #404040;
-    color: #FEFFFB;
-}
-.contact-main {
-    display: flex;
+
+/* contact */
+.contact-text {
     justify-content: center;
-    grid-area: main;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    flex: 1;
 }
-.peta {
-    width: 24em;
-    height: 15em;
-    background-color: gray;
-    margin: auto;
-    border: .5em solid gold;
+.contact-item h2 {
+    font-weight: 400;
+}
+.contact-item h3 {
+    font-weight: 300;
+}
+.contact-item {
+    margin-bottom: 1em;
+}
+.map-container {
+    flex: 2;
+    height: fit-content;
+    border-left: 1px solid black;
+    justify-content: center;
+}
+iframe {
+    width: 34em;
+    height: 24em;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    transition: .3s;
 }
-@media screen and (max-width: 830px) {
-    #contact {
-        width: 95%;
-        grid-template-areas: 'header' 'main' 'sidebar';
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-        background-color: #232D33;
-    }
-    .peta {
-        width:100%;
-    }
+
+/* About us */
+.profile {
+    flex-direction: column;
+    flex: 1;
+}
+.aboutUsImg {
+    width: 25em;
+    margin: 0 auto;
+}
+.username {
+    text-align: center;
+}
+.title {
+    font-weight: 300;
+    text-align: center;
+}
+.description-profile {
+    padding: 0 20px;
+}
+
+.cerita-aboutUs {
+    flex: 3;
+    flex-direction: column;
+    padding: 1em;
+}
+/* portfolio */
+.projects {
+    width: calc(100vw - 7rem);
+    margin: 0 auto;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'random1 random1 random3'
+    'random1 random1 random3'
+    'random2 random2 random3';
+}
+.card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    background-size: cover;
+    border-radius: 10px;
+    margin: 10px;
+}
+.random1 {
+    grid-area: random1;
+    background: url(https://source.unsplash.com/random/200x200?sig=0);
+}
+.random2 {
+    grid-area: random2;
+    background: url(https://source.unsplash.com/random/200x200?sig=1);
+}
+.random3 {
+    grid-area: random3;
+    background: url(https://source.unsplash.com/random/200x200?sig=2);
 }

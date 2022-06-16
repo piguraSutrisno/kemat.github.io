@@ -8,22 +8,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="contact">
-        <div class="container contact-header">
-            <h1 class="nama">Kemat</h1>
-        </div>
-        <div class="container contact-sidebar">
-            <div class="lokasi">
-                <p>Jaranan Magelang Jawa <br>Jl. Telaga Sarangan<br> RT 4 | RW 7</p>
+    <div class="navbar flex">
+        <h1 class="text-white brand medium-text" id="home">Kemat</h1>
+        <nav>
+            <a class="text-white nav-list" id="aboutUs">Tentang kami</a>
+            <a class="text-white nav-list" id="portfolio">Portfolio</a>
+            <a class="text-white nav-list" id="contact">Kontak</a>
+        </nav>
+    </div>
+
+    <div id="root">
+        <div class="main flex">
+            <div class="container text-container flex">
+                <h2 class="text-white welcome-text medium-text">Selamat datang!</h2>
+                <h3 class="text-white quote-text">Lorem ipsum dolor sit amet consectetur</h3>
+                <h2 class="text-white description-text">Pigura jaranan.</h2>
             </div>
-            <div class="nomor">
-                <p>08156736335</p>
+            <div class="container img-container flex flex-items-center">
+                <img class="flat-img" src="img/2204_w037_n003_304b_p1_304.jpg" alt="flat Ilustration">
             </div>
-            <div class="email">jaranansutrisno@gmail.com</div>
         </div>
-        <div class="container contact-main">
-            <iframe class="peta" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d523.1430739027176!2d110.22546218389078!3d-7.481525387005395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8ffe6e863677%3A0x77ab37e90f36af55!2sHomes!5e1!3m2!1sid!2sid!4v1652927351109!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
