@@ -24,6 +24,12 @@ body {
 .root {
     background-color: #fff;
 }
+.tomato, strong {
+    color: tomato;
+}
+.primary {
+    color: dodgerblue;
+}
 /* navbar */
 .navbar {
     justify-content: space-between;
@@ -31,11 +37,12 @@ body {
     padding: 10px 20px;
 }
 .brand {
-    font-size: 2.3em;
+    font-size: calc(3vw + 1em);
     cursor: pointer;
 }
 .nav-list {
-    margin-right: 15px;
+    font-size: calc(1.5vw + .3em);
+    margin-right: 1em;
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -44,15 +51,21 @@ body {
 
 
 /* homePage style */
-
+.jumbotron {
+    min-height: 90vh;
+}
+.welkam {
+    max-width: 800px;
+    font-size: 3vw;
+}
 .quote-text {
     font-weight: 700;
-    font-size: 2.4em;
-    line-height: 1em;
+    font-size: 3vw;
+    line-height: 1.1em;
 }
 .description-text {
     font-weight: 400;
-    font-size: 1em;
+    font-size: 2vw;
 }
 .main {
     justify-content: center;
@@ -61,7 +74,7 @@ body {
     height: 80vh;
 }
 .flat-img {
-    width: 30em;
+    width: calc(40vw + 2em);
     margin: auto;
 }
 .text-container {
@@ -71,62 +84,51 @@ body {
     gap: 10px;
 }
 
-/* contact */
-.contact-text {
-    justify-content: center;
-    flex-direction: column;
-    padding: 15px;
-    gap: 10px;
-    flex: 1;
-}
-.contact-item h2 {
-    font-weight: 400;
-}
-.contact-item h3 {
-    font-weight: 300;
-}
-.contact-item {
-    margin-bottom: 1em;
-}
-.map-container {
-    flex: 2;
-    height: fit-content;
-    border-left: 1px solid black;
-    justify-content: center;
-}
-iframe {
-    width: 34em;
-    height: 24em;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    transition: .3s;
-}
+
 
 /* About us */
+.aboutUsPage {
+    min-height: fit-content;
+}
 .profile {
     flex-direction: column;
     flex: 1;
 }
 .aboutUsImg {
-    width: 25em;
+    width: calc(40vw + 2em);
     margin: 0 auto;
 }
 .username {
+    font-size: 3vw;
     text-align: center;
 }
 .title {
+    font-size: 1.5vw;
     font-weight: 300;
     text-align: center;
 }
 .description-profile {
+    font-size: calc(1.5vw + .5em);
     padding: 0 20px;
+    text-align: center;
 }
-
+.description-title {
+    font-size: calc(2vw + .4em);
+}
+.cerita-box {
+    font-size: 1.5vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+    width: 90%;
+    margin: 10px 0;
+    border-radius: 5px;
+}
 .cerita-aboutUs {
     flex: 3;
     flex-direction: column;
     padding: 1em;
 }
+
 /* portfolio */
 .projects {
     width: calc(100vw - 7rem);
@@ -157,4 +159,98 @@ iframe {
 .random3 {
     grid-area: random3;
     background: url(https://source.unsplash.com/random/200x200?sig=2);
+}
+
+/* contact */
+.contact-text {
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    flex: 3;
+    margin-left: 2em;
+    border-right: 1px solid black;
+}
+.contact-item h2 {
+    font-weight: 400;
+}
+.contact-item h3 {
+    font-weight: 300;
+}
+.contact-item {
+    margin-bottom: 1em;
+}
+.title-contact {
+    font-size: 2vw;
+}
+.description-contact {
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin-left: 5px;
+}
+.map-container {
+    flex: 4;
+    height: fit-content;
+    justify-content: center;
+}
+iframe {
+    width: calc(36vw + 1em);
+    height: calc(24vw + 1em);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    transition: .3s;
+}
+
+@media screen and (max-width: 425px) {
+    /* gatau */
+    .main {width: 90vw;}
+    /* homepage */
+    .jumbotron {flex-direction: column-reverse;}
+    .flat-img {width: 100%;}
+    .welkam {font-size: 5vw;}
+    .quote-text {font-size: 7vw;}
+    .description-text {font-size: 3.5vw;}
+    /* about us page */
+    .aboutUsPage {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .profile {flex-direction: row;}
+    .aboutUsImg {width: 7em;}
+    .username {
+        text-align: left;
+        padding: 0 20px;
+        margin-top: 10px;
+    }
+    .title {
+        text-align: left;
+        padding: 0 20px;
+    }
+    .description-profile {
+        font-size: 2vw;
+        text-align: left;
+        margin-top: -10px;
+    }
+    .cerita-aboutUs {flex: fit-content;}
+    /* portfolio */
+    .projects {width: 90vw;}
+    /* contact */
+    .contact {
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+    .contact-text {
+        margin: 0;
+        border-right: none;
+    }
+    .title-contact {
+        font-size: 3vw;
+    }
+    .description-contact {
+        font-size: 2.5vw;
+    }
 }

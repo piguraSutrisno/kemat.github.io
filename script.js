@@ -3,6 +3,7 @@ const home = document.getElementById('home')
 const aboutUs = document.getElementById('aboutUs')
 const portfolio = document.getElementById('portfolio')
 const contact = document.getElementById('contact')
+const hider = document.getElementsByClassName('hide')
 
 home.addEventListener('click', () => {
     root.innerHTML = '<div class="main flex"><div class="container text-container flex"><h2 class="text-white welcome-text medium-text">Selamat datang!</h2><h3 class="text-white quote-text">Lorem ipsum dolor sit amet consectetur</h3><h2 class="text-white description-text">Pigura jaranan.</h2></div><div class="container img-container flex flex-items-center"><img class="flat-img" src="img/2204_w037_n003_304b_p1_304.jpg" alt="flat Ilustration"></div></div>'
