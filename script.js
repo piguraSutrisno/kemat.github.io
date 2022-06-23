@@ -6,8 +6,7 @@ const contact = document.getElementById('contact')
 
 function stopLoad() {
     const loader = document.getElementsByClassName('load')[0]
-    loader.style.opacity = '0%'
-    loader.display = 'none'
+    loader.style.display = 'none'
 }
 
 const hideSection = () => Array.from(document.getElementsByClassName('hide')).map(el => el.style.display = 'none')
@@ -15,7 +14,6 @@ const hideSection = () => Array.from(document.getElementsByClassName('hide')).ma
 window.addEventListener('load', () => {
     stopLoad()
     hideSection()
-    
     Array.from(document.getElementsByClassName('hide')[0].style.display = 'flex')
 })
 
@@ -23,15 +21,15 @@ home.addEventListener('click', () => {
     hideSection()
     Array.from(document.getElementsByClassName('hide')[0].style.display = 'flex')
 })
-aboutUs.addEventListener('click', () => {
+aboutUs.addEventListener('click', (el) => {
     hideSection()
     Array.from(document.getElementsByClassName('hide')[1].style.display = 'flex')
 })
-portfolio.addEventListener('click', () => {
+portfolio.addEventListener('click', (el) => {
     hideSection()
     Array.from(document.getElementsByClassName('hide')[2].style.display = 'grid')
 })
-contact.addEventListener('click', () => {
+contact.addEventListener('click', (el) => {
     hideSection()
     Array.from(document.getElementsByClassName('hide')[3].style.display = 'flex')
 })

@@ -28,7 +28,7 @@ body {
     color: tomato;
 }
 .primary {
-    color: dodgerblue;
+    color: #1e90ff;
 }
 
 .load {
@@ -42,6 +42,9 @@ body {
     justify-content: center;
     align-items: center;
     transition: .9s;
+}
+.load h1 {
+    font-size: 1em;
 }
 
 /* navbar */
